@@ -1,13 +1,21 @@
+import React, { createContext, useState } from "react";
+import "./../styles/App.css";
+import Auth from "./Auth";
 
-import React from "react";
-import './../styles/App.css';
+export const AuthContext = createContext();
 
 const App = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
   return (
     <div>
-        {/* Do not remove the main div */}
+      <AuthContext.Provider
+        value={{ isAuthenticated, setIsAuthenticated }}
+      >
+        <Auth />
+      </AuthContext.Provider>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
