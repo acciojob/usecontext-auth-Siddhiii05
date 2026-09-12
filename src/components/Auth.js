@@ -10,7 +10,7 @@ const Auth = () => {
         {isAuthenticated ? (
             <p className="authText">You are now authenticated, you can proceed</p>
         ) : (
-            <p className="authText">You are not authenticated</p>
+            <p className="authText">you are not authenticated</p>
         )}
 
         <input 
