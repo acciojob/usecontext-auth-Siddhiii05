@@ -8,9 +8,9 @@ const Auth = () => {
         <h1>Click on the checkbox to get authenticated</h1>
 
         {isAuthenticated ? (
-            <p>You are authenticated</p>
+            <p className="authText">You are now authenticated, you can proceed</p>
         ) : (
-            <p>You are not authenticated</p>
+            <p className="authText">You are not authenticated</p>
         )}
 
         <input 
